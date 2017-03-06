@@ -4,7 +4,7 @@ package com.ss.sorting;
  * Created by Siddhesh on 3/5/2017.
  */
 /*
-com.ss.sorting.Selection Sort:
+    Selection Sort:
     1.  Running time is insensitive to input.
     2.  Data movement is minimal
     3.  ~N exchanges

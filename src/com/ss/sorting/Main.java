@@ -20,9 +20,9 @@ public class Main {
                 " 1. Selection Sort \n" +
                 " 2. Bubble Sort \n" +
                 " 3. Insertion Sort \n" +
-                " 4. Merge Sort \n" +
-                " 5. Quick Sort \n" +
-                " 6. Heap Sort \n" +
+                " 4. Shell Sort \n" +
+                " 5. Merge Sort \n" +
+                " 6. Bottom Up Merge Sort \n" +
                 " 7. Counting Sort \n" +
                 " 8. Radix Sort");
 
@@ -38,6 +38,18 @@ public class Main {
             }
             case 3: {
                 sorter = new Insertion(a);
+                break;
+            }
+            case 4: {
+                sorter = new Shell(a);
+                break;
+            }
+            case 5: {
+                sorter = new Merge(a);
+                break;
+            }
+            case 6: {
+                sorter = new BUMerge(a);
                 break;
             }
             default: {
