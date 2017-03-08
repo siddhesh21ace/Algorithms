@@ -1,4 +1,4 @@
-package com.ss.sorting;
+package com.ss.sorting.comparison;
 
 /**
  * Created by Siddhesh on 3/6/2017.
@@ -10,7 +10,7 @@ package com.ss.sorting;
  */
 public class BUMerge extends Merge {
 
-    BUMerge(Comparable a[]) {
+    public BUMerge(Object a[]) {
         super(a);
     }
 

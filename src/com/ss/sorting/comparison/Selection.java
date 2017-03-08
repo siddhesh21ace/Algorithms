@@ -1,4 +1,4 @@
-package com.ss.sorting;
+package com.ss.sorting.comparison;
 
 /**
  * Created by Siddhesh on 3/5/2017.
@@ -10,15 +10,15 @@ package com.ss.sorting;
     3.  ~N exchanges
     4.  ~N^2 compares
 */
-class Selection extends Sorter {
+public class Selection extends CompSorter {
 
-    Selection(Comparable a[]) {
-        setA(a);
+    public Selection(Object a[]) {
+        super(a);
     }
 
     @Override
     public void sort() {
-        int N = getA().length;
+        int N = a.length;
         for (int i = 0; i < N; i++) {
             int min = i;
             for (int j = i + 1; j < N; j++) {

@@ -1,4 +1,4 @@
-package com.ss.sorting;
+package com.ss.sorting.comparison;
 
 /**
  * Created by Siddhesh on 3/5/2017.
@@ -10,15 +10,15 @@ package com.ss.sorting;
        Worst case: ~N^2/2 compares and ~N^2/2 exchanges
        Best case: ~N^2/2 compares and 0 exchanges
 */
-public class Bubble extends Sorter {
+public class Bubble extends CompSorter {
 
-    Bubble(Comparable a[]) {
-        setA(a);
+    public Bubble(Object a[]) {
+        super(a);
     }
 
     @Override
     public void sort() {
-        int N = getA().length;
+        int N = a.length;
         for (int i = 0; i < N - 1; i++) {
             for (int j = 1; j < N - i; j++) {
                 if (less(j, j - 1)) {

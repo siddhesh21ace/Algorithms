@@ -13,7 +13,7 @@ class InputHelper {
     private static final int INT = 1;
     private static final int DOUBLE = 2;
 
-    private static List<Comparable> input = new ArrayList<>();
+    private static List<Object> input = new ArrayList<>();
 
     private static void readInts(BufferedReader br) throws IOException {
         String line;
@@ -36,7 +36,7 @@ class InputHelper {
         }
     }
 
-    static Comparable[] readFile(int inputType) {
+    static Object[] readFile(int inputType) {
         BufferedReader br = null;
         try {
             br = new BufferedReader(new FileReader("input.txt"));
@@ -64,7 +64,7 @@ class InputHelper {
                 e.printStackTrace();
             }
         }
-        Comparable a[] = new Comparable[input.size()];
+        Object a[] = new Object[input.size()];
         return input.toArray(a);
     }
 }

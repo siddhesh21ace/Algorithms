@@ -3,6 +3,9 @@ package com.ss.sorting;
  * Created by Siddhesh on 3/5/2017.
  */
 
+import com.ss.sorting.comparison.*;
+import com.ss.sorting.counting.Counting;
+
 import java.util.Scanner;
 
 public class Main {
@@ -14,7 +17,7 @@ public class Main {
                 " 2. Double \n" +
                 " 3. String");
         int inputType = sc.nextInt();
-        Comparable a[] = InputHelper.readFile(inputType);
+        Object[] a = InputHelper.readFile(inputType);
         Sorter sorter;
         System.out.println("Enter Sort Type: \n" +
                 " 1. Selection Sort \n" +
@@ -23,8 +26,8 @@ public class Main {
                 " 4. Shell Sort \n" +
                 " 5. Merge Sort \n" +
                 " 6. Bottom Up Merge Sort \n" +
-                " 7. Counting Sort \n" +
-                " 8. Radix Sort");
+                " 7. Quick Sort \n" +
+                " 8. Counting Sort");
 
         int sortType = sc.nextInt();
         switch (sortType) {
@@ -52,15 +55,18 @@ public class Main {
                 sorter = new BUMerge(a);
                 break;
             }
+            case 7: {
+                sorter = new Quick(a);
+                break;
+            }
             default: {
-                sorter = new Insertion(a);
+                sorter = new Counting(a);
                 break;
             }
             // TO-DO : Add other sorts
         }
 
         sorter.sort();
-        assert sorter.isSorted();
         sorter.show();
     }
 }

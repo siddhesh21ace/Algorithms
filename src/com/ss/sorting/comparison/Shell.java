@@ -1,4 +1,4 @@
-package com.ss.sorting;
+package com.ss.sorting.comparison;
 
 /**
  * Created by Siddhesh on 3/6/2017.
@@ -9,16 +9,16 @@ package com.ss.sorting;
     It allows exchanges of array entries that are far apart to produce partially
     sorted arrays that are eventually sorted by inserion sort
  */
-public class Shell extends Sorter {
+public class Shell extends CompSorter {
 
-    public Shell(Comparable a[]) {
-        setA(a);
+    public Shell(Object a[]) {
+        super(a);
     }
 
     @Override
     public void sort() {
         int h = 1;
-        int N = getA().length;
+        int N = a.length;
         while (h < N / 3) {
             h = 3 * h + 1;
         }
