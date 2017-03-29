@@ -27,7 +27,8 @@ public class Main {
                 " 5. Merge Sort \n" +
                 " 6. Bottom Up Merge Sort \n" +
                 " 7. Quick Sort \n" +
-                " 8. Counting Sort");
+                " 8. Counting Sort \n" +
+                " 9. 3-Way Quick Sort");
 
         int sortType = sc.nextInt();
         switch (sortType) {
@@ -59,8 +60,16 @@ public class Main {
                 sorter = new Quick(a);
                 break;
             }
-            default: {
+            case 8: {
                 sorter = new Counting(a);
+                break;
+            }
+            case 9: {
+                sorter = new Quick3way(a);
+                break;
+            }
+            default: {
+                sorter = new Selection(a);
                 break;
             }
             // TO-DO : Add other sorts

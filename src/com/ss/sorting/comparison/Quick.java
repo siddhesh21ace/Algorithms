@@ -25,7 +25,7 @@ public class Quick extends CompSorter {
         sort(j + 1, hi);
     }
 
-    private int partition(int lo, int hi) {
+    public int partition(int lo, int hi) {
         int i = lo, j = hi + 1;
         while (true) {
             while (less(++i, lo)) if (i == hi) break;
